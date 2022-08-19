@@ -1,0 +1,25 @@
+{
+  "name": "cypress_ci_cd-jenkins",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:adminLogin": "cypress run --spec 'cypress/e2e/adminLogin.cy.js' --record --key cf2685fa-2a07-4f31-b600-26700ae2eef4",
+    "cy:startPageClient": "cypress run --spec 'cypress/e2e/startPegeClient.cy.js' --record --key cf2685fa-2a07-4f31-b600-26700ae2eef4",
+    "cy:parallel": "npm run cy:adminLogin -- --browser chrome --group Spec1 --ci-build-id 1 & npm run cy:startPageClient -- --browser chrome --group Spec2 --ci-build-id 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SergeiAnatolich/Cypress_CI_CD-Jenkins.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SergeiAnatolich/Cypress_CI_CD-Jenkins/issues"
+  },
+  "homepage": "https://github.com/SergeiAnatolich/Cypress_CI_CD-Jenkins#readme",
+  "dependencies": {
+    "cypress": "^10.6.0"
+  }
+}
